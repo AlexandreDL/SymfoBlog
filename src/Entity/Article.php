@@ -41,7 +41,9 @@ class Article
 
     /**
      * @ORM\Column(type="string", length=255)
-     * @Assert\Url()
+     * @Assert\Url(
+     *    protocols = {"http", "https", "ftp"}
+     * )
      */
     private $image;
 
